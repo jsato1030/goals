@@ -1,0 +1,47 @@
+		<div id="page-wrapper">
+
+
+			<!-- Banner -->
+				<section id="banner">
+
+					<div class="inner">
+
+						<header>
+							<h2>GOAL's</h2>
+						</header>
+						<p>デートに使えるお店を紹介しております。</p>
+						<footer>
+							<ul class="buttons vertical">
+							 <%= form_tag('/shops', method: :post) do %>
+							    <li><input placeholder="場所を入力してください" type="text" name="name"></li>
+							    <li><input type="submit" value="検索する"></li>
+							  <% end %>
+<!-- 								<li><a href="#main" class="button fit scrolly">検索する</a></li>
+ -->							</ul>
+						</footer>
+
+					</div>
+
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+				</footer>
+
+		</div>
+
+
+		<!-- Scripts -->
+			<script src="assets/jquery.min.js"></script>
+			<script src="assets/jquery.dropotron.min.js"></script>
+			<script src="assets/jquery.scrolly.min.js"></script>
+			<script src="assets/jquery.scrollgress.min.js"></script>
+			<script src="assets/skel.min.js"></script>
+			<script src="assets/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/main.js"></script>
