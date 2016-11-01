@@ -6,19 +6,14 @@
 
           <div class="inner">
 
-            <p>女性の情報を登録してください。</p>
+            <p>女性を投稿しました</p>
             <footer>
               <ul class="buttons vertical">
-               <%= form_tag('/womans/create', method: :post) do %>
-                  <li>名前：<input placeholder="" type="text" name="name"></li>
-                  <li>年齢：<input placeholder="" type="text" name="name"></li>
-                  <li>職業：<input placeholder="" type="text" name="name"></li>
-                  <li>ランク：<input placeholder="" type="text" name="name"></li>
-                  <li>特徴：<input placeholder="" type="text" name="name"></li>
-                  <li>メモ：<input placeholder="" type="text" name="name"></li>
-                  <li><input type="submit" value="登録する"></li>
+               <%= form_tag('/', method: :get) do %>
+                  <li><input type="submit" value="トップ画面に戻る"></li>
                 <% end %>
-              </ul>
+<!--                <li><a href="#main" class="button fit scrolly">検索する</a></li>
+ -->              </ul>
             </footer>
 
           </div>

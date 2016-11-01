@@ -18,13 +18,14 @@
                       <p>
                         <ul>
                         <li>
-                          評価：⭐️⭐️⭐️⭐️
+                          総合評価：⭐️⭐️⭐️⭐️
                         </li>
                         </ul>
                       </p>
                     </section>
                     </li>
                <%= form_tag('/reviews/create', method: :post) do %>
+                  <li>評価：<input type="text" placeholder="" name="rate"></li>
                   <li><textarea placeholder="口コミを入力してください"></textarea></li>
                   <li><input type="submit" value="投稿する"></li>
                 <% end %>

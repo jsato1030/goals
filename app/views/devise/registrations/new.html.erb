@@ -1,0 +1,53 @@
+    <div id="page-wrapper">
+      <!-- Banner -->
+        <section id="banner">
+          <div class="inner">
+            <header>
+              <h3>Sign up</h3>
+            </header>
+            <footer>
+              <ul class="buttons vertical">
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                  <%= devise_error_messages! %>
+
+                  <li>
+                    <%= f.label :email %><br />
+                    <%= f.email_field :email, autofocus: true %>
+                  </li>
+
+                  <li>
+                    <%= f.label :password %>
+                    <% if @minimum_password_length %>
+                    <em>(<%= @minimum_password_length %> characters minimum)</em>
+                    <% end %><br />
+                    <%= f.password_field :password, autocomplete: "off" %>
+                  </li>
+
+                  <li>
+                    <%= f.label :password_confirmation %><br />
+                    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                  </li>
+
+                  <li class="buttons vertical">
+                    <%= f.submit "Sign up" %>
+                  </li>
+                <% end %>
+
+                <%= render "devise/shared/links" %>
+              </ul>
+            </footer>
+
+          </div>
+
+        </section>
+
+      <!-- Footer -->
+  <footer id="footer">
+
+    <ul class="copyright">
+      <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+
+  </footer>
+
+</div>

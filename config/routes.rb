@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'shops#index'
   post 'shops' => 'shops#search'
   get   'shops/show' => 'shops#show'
@@ -8,5 +9,6 @@ Rails.application.routes.draw do
   post  'reviews' => 'reviews#search'
   get   'reviews/show'  => 'reviews#show'
   post  'reviews/create'  => 'reviews#create'
-  get   'womans/index'    =>  'womans#index'
+  get   'womans'    =>  'womans#index'
+  post  'womans/create'   =>   'womans#create'
 end
