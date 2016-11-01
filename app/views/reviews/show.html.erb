@@ -6,12 +6,27 @@
 
           <div class="inner">
 
-            <p>どのお店に口コミしますか？</p>
+            <p>口コミを入力してください</p>
             <footer>
               <ul class="buttons vertical">
-               <%= form_tag('/reviews', method: :post) do %>
-                  <li><input placeholder="口コミしたいお店を入力" type="text" name="name"></li>
-                  <li><input type="submit" value="検索する"></li>
+                  <li>
+                    <section>
+                      <span class="icon featured fa-check"></span>
+                      <header>
+                        <h3>リゴレットオーシャンズクラブ</h3>
+                      </header>
+                      <p>
+                        <ul>
+                        <li>
+                          評価：⭐️⭐️⭐️⭐️
+                        </li>
+                        </ul>
+                      </p>
+                    </section>
+                    </li>
+               <%= form_tag('/reviews/create', method: :post) do %>
+                  <li><textarea placeholder="口コミを入力してください"></textarea></li>
+                  <li><input type="submit" value="投稿する"></li>
                 <% end %>
 <!--                <li><a href="#main" class="button fit scrolly">検索する</a></li>
  -->              </ul>
@@ -20,10 +35,6 @@
           </div>
 
         </section>
-
-
-
-
 
       <!-- Footer -->
         <footer id="footer">

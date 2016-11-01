@@ -6,24 +6,18 @@
 
           <div class="inner">
 
-            <p>どのお店に口コミしますか？</p>
+            <p>お店を登録しました</p>
             <footer>
               <ul class="buttons vertical">
-               <%= form_tag('/reviews', method: :post) do %>
-                  <li><input placeholder="口コミしたいお店を入力" type="text" name="name"></li>
-                  <li><input type="submit" value="検索する"></li>
+               <%= form_tag('/', method: :get) do %>
+                  <li><input type="submit" value="トップ画面に戻る"></li>
                 <% end %>
-<!--                <li><a href="#main" class="button fit scrolly">検索する</a></li>
- -->              </ul>
+              </ul>
             </footer>
 
           </div>
 
         </section>
-
-
-
-
 
       <!-- Footer -->
         <footer id="footer">

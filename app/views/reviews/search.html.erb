@@ -6,7 +6,7 @@
 
           <!-- Two -->
             <section class="wrapper style1 container special">
-              <h3>お店検索結果<h3>
+              <h3>口コミするお店を選んでください<h3>
 
               <div class="row">
                 <div class="4u 12u(narrower)">
@@ -26,6 +26,12 @@
                       </li>
                       <li>
                         L字テーブル：あり️
+                      </li>
+                      <li>
+                        <ul class="buttons vertical">
+                         <%= form_tag('reviews/show', method: :get) do %>
+                            <li><input type="submit" value="口コミする"></li>
+                          <% end %>
                       </li>
                       </ul>
                     </p>
@@ -51,6 +57,12 @@
                       <li>
                         L字テーブル：あり️
                       </li>
+                      <li>
+                        <ul class="buttons vertical">
+                         <%= form_tag('reviews/show', method: :get) do %>
+                            <li><input type="submit" value="口コミする"></li>
+                          <% end %>
+                      </li>
                       </ul>
                     </p>
                   </section>
@@ -63,8 +75,7 @@
                   <section>
                     <span class="icon featured fa-check"></span>
                     <header>
-                      <h3><%= link_to 'リゴレットオーシャンズクラブ', '/shops/show' %>
-                      </h3>
+                      <h3>リゴレットオーシャンズクラブ</h3>
                     </header>
                     <p>
                       <ul>
@@ -76,6 +87,12 @@
                       </li>
                       <li>
                         L字テーブル：あり️
+                      </li>
+                      <li>
+                        <ul class="buttons vertical">
+                         <%= form_tag('reviews/show', method: :get) do %>
+                            <li><input type="submit" value="口コミする"></li>
+                          <% end %>
                       </li>
                       </ul>
                     </p>

@@ -4,4 +4,7 @@ class ShopsController < ApplicationController
 
   def search
   end
+
+  def add
+  end
 end
