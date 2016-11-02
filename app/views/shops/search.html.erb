@@ -9,79 +9,29 @@
               <h3>お店検索結果<h3>
 
               <div class="row">
-                <div class="4u 12u(narrower)">
-
-                  <section>
-                    <span class="icon featured fa-check"></span>
-                    <header>
-                      <h3>リゴレットオーシャンズクラブ</h3>
-                    </header>
-                    <p>
-                      <ul>
-                      <li>
-                        評価：⭐️⭐️⭐️⭐️
-                      </li>
-                      <li>
-                        口コミ：５８件️
-                      </li>
-                      <li>
-                        L字テーブル：あり️
-                      </li>
-                      </ul>
-                    </p>
-                  </section>
-
-                </div>
-
-               <div class="4u 12u(narrower)">
-
-                  <section>
-                    <span class="icon featured fa-check"></span>
-                    <header>
-                      <h3>リゴレットオーシャンズクラブ</h3>
-                    </header>
-                    <p>
-                      <ul>
-                      <li>
-                        評価：⭐️⭐️⭐️⭐️
-                      </li>
-                      <li>
-                        口コミ：５８件️
-                      </li>
-                      <li>
-                        L字テーブル：あり️
-                      </li>
-                      </ul>
-                    </p>
-                  </section>
-
-                </div>
- 
-
-                <div class="4u 12u(narrower)">
-
-                  <section>
-                    <span class="icon featured fa-check"></span>
-                    <header>
-                      <h3><%= link_to 'リゴレットオーシャンズクラブ', '/shops/show' %>
-                      </h3>
-                    </header>
-                    <p>
-                      <ul>
-                      <li>
-                        評価：⭐️⭐️⭐️⭐️
-                      </li>
-                      <li>
-                        口コミ：５８件️
-                      </li>
-                      <li>
-                        L字テーブル：あり️
-                      </li>
-                      </ul>
-                    </p>
-                  </section>
-
-                </div>
+                <% @shops.each do |shop| %>
+                  <div class="4u 12u(narrower)">
+                    <section>
+                      <span class="icon featured fa-check"></span>
+                      <header>
+                        <h3><a href="/shops/<%= shop.id %>"><%= shop.name %></a></h3>
+                      </header>
+                      <p>
+                        <ul>
+                        <li>
+                          評価：⭐️⭐️⭐️⭐️
+                        </li>
+                        <li>
+                          口コミ：５８件️
+                        </li>
+                        <li>
+                          L字テーブル：<%= shop.l %>
+                        </li>
+                        </ul>
+                      </p>
+                    </section>
+                  </div>
+                <% end %>
 
               </div>
             </section>

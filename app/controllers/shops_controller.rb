@@ -1,8 +1,10 @@
 class ShopsController < ApplicationController
+before_action :authenticate_user!, only: :new
   def index
   end
 
   def search
+    @shops = Shop.where('name LIKE(?)', "%#{params[:name]}%").limit(20)
   end
 
   def create
@@ -12,6 +14,10 @@ class ShopsController < ApplicationController
 
   def new
     @shop = Shop.new
+  end
+
+  def show
+    @shop = Shop.find(params[:id])
   end
 
   private

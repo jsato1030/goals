@@ -6,7 +6,7 @@
 
           <div class="inner">
 
-            <p>リゴレットオーシャンズクラブ</p>
+            <p><%= @shop.name %></p>
             <footer>
               <ul class="buttons vertical">
                 <li>
@@ -16,17 +16,16 @@
                   口コミ：５８件️
                 </li>
                 <li>
-                  L字テーブル：あり️
+                  L字テーブル：<%= @shop.l %>️
                 </li>
-                <li>ジャンル：イタリアン</li>
-                <li>TEL：03-1111-2222</li>
-                <li>住所：東京都渋谷区道玄坂１−１−１◯ビル３F</li>
-                <li>交通手段：渋谷駅徒歩５分</li>
-                <li>営業時間：17:00-2:00</li>
-                <li>定休日：月曜日</li>
-                <li>予算：5000円</li>
-                <li>カード：VISA,MASTER</li>
-                <li>サービス料・チャージ料：15%</li>
+                <li>ジャンル：<%= @shop.genre %></li>
+                <li>TEL：<%= @shop.tel %></li>
+                <li>住所：<%= @shop.address %></li>
+                <li>交通手段：<%= @shop.transportation %></li>
+                <li>営業時間：<%= @shop.bussiness_hours %></li>
+                <li>定休日：<%= @shop.regslar_holiday %></li>
+                <li>カード：<%= @shop.card %></li>
+                <li>サービス料・チャージ料：<%= @shop.service_charge %></li>
               </ul>
             </footer>
 
