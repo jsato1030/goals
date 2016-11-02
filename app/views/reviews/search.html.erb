@@ -9,12 +9,12 @@
               <h3>口コミするお店を選んでください<h3>
 
               <div class="row">
+                <% @shops.each do |shop| %>
                 <div class="4u 12u(narrower)">
-
                   <section>
                     <span class="icon featured fa-check"></span>
                     <header>
-                      <h3>リゴレットオーシャンズクラブ</h3>
+                      <h3><%= shop.name %></h3>
                     </header>
                     <p>
                       <ul>
@@ -25,80 +25,17 @@
                         口コミ：５８件️
                       </li>
                       <li>
-                        L字テーブル：あり️
-                      </li>
-                      <li>
                         <ul class="buttons vertical">
-                         <%= form_tag('reviews/show', method: :get) do %>
+                         <%= form_tag("reviews/#{ shop.id }/show", method: :get) do %>
                             <li><input type="submit" value="口コミする"></li>
                           <% end %>
                       </li>
                       </ul>
                     </p>
                   </section>
-
                 </div>
+              <% end %>
 
-               <div class="4u 12u(narrower)">
-
-                  <section>
-                    <span class="icon featured fa-check"></span>
-                    <header>
-                      <h3>リゴレットオーシャンズクラブ</h3>
-                    </header>
-                    <p>
-                      <ul>
-                      <li>
-                        評価：⭐️⭐️⭐️⭐️
-                      </li>
-                      <li>
-                        口コミ：５８件️
-                      </li>
-                      <li>
-                        L字テーブル：あり️
-                      </li>
-                      <li>
-                        <ul class="buttons vertical">
-                         <%= form_tag('reviews/show', method: :get) do %>
-                            <li><input type="submit" value="口コミする"></li>
-                          <% end %>
-                      </li>
-                      </ul>
-                    </p>
-                  </section>
-
-                </div>
- 
-
-                <div class="4u 12u(narrower)">
-
-                  <section>
-                    <span class="icon featured fa-check"></span>
-                    <header>
-                      <h3>リゴレットオーシャンズクラブ</h3>
-                    </header>
-                    <p>
-                      <ul>
-                      <li>
-                        評価：⭐️⭐️⭐️⭐️
-                      </li>
-                      <li>
-                        口コミ：５８件️
-                      </li>
-                      <li>
-                        L字テーブル：あり️
-                      </li>
-                      <li>
-                        <ul class="buttons vertical">
-                         <%= form_tag('reviews/show', method: :get) do %>
-                            <li><input type="submit" value="口コミする"></li>
-                          <% end %>
-                      </li>
-                      </ul>
-                    </p>
-                  </section>
-
-                </div>
 
               </div>
             </section>

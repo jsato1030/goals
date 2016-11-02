@@ -4,6 +4,7 @@ before_action :authenticate_user!, only: :index
   end
 
   def search
+    @shops = Shop.where('name LIKE(?)', "%#{params[:name]}%").limit(20)
   end
 
   def show

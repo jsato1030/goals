@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   get   'shops/:id'   =>  'shops#show'
   get   'reviews' => 'reviews#index'
   post  'reviews' => 'reviews#search'
-  get   'reviews/show'  => 'reviews#show'
+  # get   'reviews/show'  => 'reviews#show'
   post  'reviews/create'  => 'reviews#create'
+  get   'reviews/:id/show'  => 'reviews#show'
   get   'womans'    =>  'womans#index'
   post  'womans/create'   =>   'womans#create'
 end
