@@ -9,14 +9,34 @@
             <p>女性の情報を登録してください。</p>
             <footer>
               <ul class="buttons vertical">
-               <%= form_tag('/womans/create', method: :post) do %>
-                  <li>名前：<input placeholder="" type="text" name="name"></li>
-                  <li>年齢：<input placeholder="" type="text" name="name"></li>
-                  <li>職業：<input placeholder="" type="text" name="name"></li>
-                  <li>ランク：<input placeholder="" type="text" name="name"></li>
-                  <li>特徴：<input placeholder="" type="text" name="name"></li>
-                  <li>メモ：<input placeholder="" type="text" name="name"></li>
-                  <li><input type="submit" value="登録する"></li>
+                  <%= form_for @woman, :url => {:action => 'create'} do |f| %>
+                  <li>
+                    <%= f.label :名前： %>
+                    <%= f.text_field :name, placeholder: '', value: '' %>
+                  </li>
+                  <li>
+                    <%= f.label :年齢： %>
+                    <%= f.text_field :age, placeholder: '', value: '' %>
+                  </li>
+                  <li>
+                    <%= f.label :職業： %>
+                    <%= f.text_field :job, placeholder: '', value: '' %>
+                  </li>
+                  <li>
+                    <%= f.label :ランク： %>
+                    <%= f.number_field :rank, placeholder: '', value: 1, max: 10, min: 1 %>
+                  </li>
+                  <li>
+                    <%= f.label :特徴： %>
+                    <%= f.text_area :character, placeholder: '', value: '' %>
+                  </li>
+                  <li>
+                    <%= f.label :メモ： %>
+                    <%= f.text_area :memo, placeholder: '', value: '' %>
+                  </li>
+                  <li>
+                    <input type="submit" value="登録する">
+                  </li>
                 <% end %>
               </ul>
             </footer>

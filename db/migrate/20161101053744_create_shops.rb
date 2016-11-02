@@ -11,7 +11,7 @@ class CreateShops < ActiveRecord::Migration
       t.string  :carc
       t.string  :service_charge
       t.boolean :l
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end

@@ -1,0 +1,84 @@
+    <div id="page-wrapper">
+
+
+      <!-- Banner -->
+        <section id="banner">
+
+          <div class="inner">
+
+            <p>お店の情報を入力してください。</p>
+            <footer>
+              <ul class="buttons vertical">
+                <%= form_for @shop, :url => {:action => 'create'} do |f| %>
+                <li>
+                  <%= f.label :店名： %>
+                  <%= f.text_field :name, placeholder: '', value: '' %>
+                </li>
+                <li>
+                  <%= f.label :L字テーブル： %>
+                  <%= f.text_field :l, placeholder: '', value: '' %>
+                </li>
+                <li>
+                  <%= f.label :ジャンル： %>
+                  <%= f.text_field :genre, placeholder: '', value: '' %>
+                </li>
+                <li>
+                  <%= f.label :TEL： %>
+                  <%= f.text_field :tel, placeholder: '', value: '' %>
+                </li>
+                <li>
+                  <%= f.label :交通手段： %>
+                  <%= f.text_field :transportation, placeholder: '', value: '' %>
+                </li>
+                <li>
+                  <%= f.label :住所： %>
+                  <%= f.text_field :address, placeholder: '', value: '' %>
+                </li>
+                <li>
+                  <%= f.label :営業時間： %>
+                  <%= f.text_field :bussiness_hours, placeholder: '', value: '' %>
+                </li>
+                <li>
+                  <%= f.label :定休日： %>
+                  <%= f.text_field :regslar_holiday, placeholder: '', value: '' %>
+                </li>
+                <li>
+                  <%= f.label :カード： %>
+                  <%= f.text_field :card, placeholder: '', value: '' %>
+                </li>
+                <li>
+                  <%= f.label :サービス料・チャージ料： %>
+                  <%= f.text_field :service_charge, placeholder: '', value: '' %>
+                </li>
+                <li>
+                  <input type="submit" value="登録する">
+                </li>
+              <% end %>
+              </ul>
+            </footer>
+
+          </div>
+
+        </section>
+
+      <!-- Footer -->
+        <footer id="footer">
+
+          <ul class="copyright">
+            <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+
+        </footer>
+
+    </div>
+
+
+    <!-- Scripts -->
+      <script src="assets/jquery.min.js"></script>
+      <script src="assets/jquery.dropotron.min.js"></script>
+      <script src="assets/jquery.scrolly.min.js"></script>
+      <script src="assets/jquery.scrollgress.min.js"></script>
+      <script src="assets/skel.min.js"></script>
+      <script src="assets/util.js"></script>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="assets/main.js"></script>
