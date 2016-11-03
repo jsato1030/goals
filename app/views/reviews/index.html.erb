@@ -9,7 +9,7 @@
             <p>どのお店に口コミしますか？</p>
             <footer>
               <ul class="buttons vertical">
-               <%= form_tag('/reviews', method: :post) do %>
+               <%= form_tag("/shops/reviews_search", method: :post) do %>
                   <li><input placeholder="口コミしたいお店を入力" type="text" name="name"></li>
                   <li><input type="submit" value="検索する"></li>
                 <% end %>

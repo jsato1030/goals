@@ -13,7 +13,7 @@
                     <section>
                       <span class="icon featured fa-check"></span>
                       <header>
-                        <h3>リゴレットオーシャンズクラブ</h3>
+                        <h3><%= @shop.name %></h3>
                       </header>
                       <p>
                         <ul>
@@ -24,13 +24,17 @@
                       </p>
                     </section>
                     </li>
-               <%= form_tag('/reviews/create', method: :post) do %>
-                  <li>評価：<input type="text" placeholder="" name="rate"></li>
-                  <li><textarea placeholder="口コミを入力してください"></textarea></li>
-                  <li><input type="submit" value="投稿する"></li>
-                <% end %>
-<!--                <li><a href="#main" class="button fit scrolly">検索する</a></li>
- -->              </ul>
+                      <%= form_for [@shop, @review] do |f| %>
+                      <li>
+                        <%= f.label :評価, style: { 'margin-right' => 8 } %>
+                        <%= f.number_field :rate, placeholder: '評価', value: 1, max: 10, min: 1, html: { class: "search__query", style: 'text-align: right;' } %>
+                      </li>
+                      <li>
+                        <%= f.text_area :review, placeholder: 'レビューを書いてね！', style: 'width: 100%;height: 300px;' %>
+                      </li>
+                      <li><input type="submit" value="投稿する"></li>
+                    <% end %>
+              </ul>
             </footer>
 
           </div>

@@ -26,7 +26,7 @@
                       </li>
                       <li>
                         <ul class="buttons vertical">
-                         <%= form_tag("reviews/#{ shop.id }/show", method: :get) do %>
+                         <%= form_tag("/shops/#{ shop.id }/reviews/new", method: :get) do %>
                             <li><input type="submit" value="口コミする"></li>
                           <% end %>
                       </li>

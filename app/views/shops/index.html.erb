@@ -12,8 +12,8 @@
 						<p>デートに使えるお店を紹介しております。</p>
 						<footer>
 							<ul class="buttons vertical">
-							 <%= form_tag('/shops', method: :post) do %>
-							    <li><input placeholder="場所を入力してください" type="text" name="name"></li>
+							 <%= form_tag('/shops/shops_search', method: :post) do %>
+							    <li><input placeholder="場所を入力してください" type="text" name="address"></li>
 							    <li><input type="submit" value="検索する"></li>
 							  <% end %>
 <!-- 								<li><a href="#main" class="button fit scrolly">検索する</a></li>

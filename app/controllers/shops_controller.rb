@@ -3,7 +3,11 @@ before_action :authenticate_user!, only: :new
   def index
   end
 
-  def search
+  def shops_search
+    @shops = Shop.where('address LIKE(?)', "%#{params[:address]}%").limit(20)
+  end
+
+  def reviews_search
     @shops = Shop.where('name LIKE(?)', "%#{params[:name]}%").limit(20)
   end
 
