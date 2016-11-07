@@ -27,11 +27,23 @@
                 <li>カード：<%= @shop.card %></li>
                 <li>サービス料・チャージ料：<%= @shop.service_charge %></li>
               </ul>
-            </footer>
+              <p>口コミ一覧(<%= @shop.reviews.count %>件)</p>
+              <ul>
+                <% @shop.reviews.each do |review|%>
+                <li>
+                  <%= review.user.email %>：
+                  <%= review.review %>
+                </li>
+                <% end %>
+              </ul>
 
+            </footer>
           </div>
 
         </section>
+
+
+
 
       <!-- Footer -->
         <footer id="footer">

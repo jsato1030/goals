@@ -26,7 +26,6 @@ before_action :authenticate_user!, only: :new
 
   def shops_edit_search
     @shops = Shop.where(user_id: current_user.id)
-    binding.pry
   end
   private
   def create_params
