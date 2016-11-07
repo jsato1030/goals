@@ -6,36 +6,36 @@
 
           <div class="inner">
 
-            <p>女性の情報を登録してください。</p>
+            <p>女性の情報を編集してください。</p>
             <footer>
               <ul class="buttons vertical">
-                  <%= form_for @woman, :url => {:action => 'create'} do |f| %>
+                  <%= form_for @woman, :url => {:action => 'update'} do |f| %>
                   <li>
                     <%= f.label :名前： %>
-                    <%= f.text_field :name, placeholder: '', value: '' %>
+                    <%= f.text_field :name, placeholder: '', value: "#{@woman.name }" %>
                   </li>
                   <li>
                     <%= f.label :年齢： %>
-                    <%= f.text_field :age, placeholder: '半角数字で入力してください', value: '' %>
+                    <%= f.text_field :age, placeholder: '半角数字で入力してください', value: "#{@woman.age }" %>
                   </li>
                   <li>
                     <%= f.label :職業： %>
-                    <%= f.text_field :job, placeholder: '', value: '' %>
+                    <%= f.text_field :job, placeholder: '', value: "#{@woman.job }" %>
                   </li>
                   <li>
                     <%= f.label :ランク： %>
-                    <%= select_tag 'woman[rank]', options_for_select(["S", "A","B","C","D"]) %>
+                    <%= select_tag 'woman[rank]', options_for_select(["S", "A","B","C","D"], "#{@woman.rank }") %>
                   </li>
                   <li>
                     <%= f.label :特徴： %>
-                    <%= f.text_area :character, placeholder: '', value: '' %>
+                    <%= f.text_area :character, placeholder: '', value: "#{@woman.character }" %>
                   </li>
                   <li>
                     <%= f.label :メモ： %>
-                    <%= f.text_area :memo, placeholder: '', value: '' %>
+                    <%= f.text_area :memo, placeholder: '', value: "#{@woman.memo }" %>
                   </li>
                   <li>
-                    <input type="submit" value="登録する">
+                    <input type="submit" value="編集する">
                   </li>
                 <% end %>
               </ul>

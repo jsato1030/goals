@@ -12,7 +12,7 @@ before_action :authenticate_user!, only: :new
   end
 
   def create
-    Shop.create(create_params)
+    @shop = Shop.create(create_params)
     redirect_to controller: :shops, action: :index
   end
 

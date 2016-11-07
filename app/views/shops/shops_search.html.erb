@@ -19,8 +19,16 @@
                       <p>
                         <ul>
                         <li>
-                          評価：⭐️⭐️⭐️⭐️
-                        </li>
+                          <% if shop.reviews.present? %>
+<!--                             <span class="rating-star">
+ -->                              <i class="star-actived rate-<%= shop.reviews.average(:rate).round %>0"></i>
+                            <!-- </span> -->
+                          <% else %>
+                            <span class="rating-star">
+                            <i class="star-actived rate-0"></i>
+                            </span>
+                          <% end %> 
+                       </li>
                         <li>
                           口コミ：５８件️
                         </li>

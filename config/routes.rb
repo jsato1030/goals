@@ -10,7 +10,12 @@ Rails.application.routes.draw do
     end
   end
   resources :reviews, only: :index
-  resources :womans, only: [:index, :create]
+  resources :womans, only: [:index, :create, :edit, :update] do
+    collection do
+      get 'search'
+    end
+  end
+
   root 'shops#index'
   # get   'shops' => 'shops#index'
   # post 'shops' => 'shops#search'

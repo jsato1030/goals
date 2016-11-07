@@ -13,13 +13,13 @@
 <body>
 <header id="header" class="alt">
     <h1 id="logo"><%= link_to "GOAL's", '/shops' %>
-    <!-- <a href="/">GOAL's</span></a></h1>
-     -->
      <nav id="nav">
       <ul>
         <li class="current"><a href="/reviews">口コミ投稿</a></li>
         <li class="current"><a href="/womans">女性プロフ登録</a></li>
+        <li class="current"><a href="/womans/search">女性プロフ編集(一覧)</a></li>
         <li class="current"><a href="/shops/new">お店を登録</a></li>
+        <li class="current"><a href="/shops/edit">お店を編集</a></li>
       <% if user_signed_in? %>
         <li>
           <a href="/users/sign_out" class="button special">Sign Out</a>

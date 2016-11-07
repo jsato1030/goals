@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161102032711) do
+ActiveRecord::Schema.define(version: 20161107030652) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "rate",       limit: 4
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 20161102032711) do
     t.string   "bussiness_hours", limit: 255
     t.string   "regslar_holiday", limit: 255
     t.string   "service_charge",  limit: 255
-    t.boolean  "l"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
     t.string   "card",            limit: 255
+    t.string   "l",               limit: 255
   end
 
   create_table "users", force: :cascade do |t|

@@ -16,7 +16,7 @@
                 </li>
                 <li>
                   <%= f.label :L字テーブル： %>
-                  <%= f.text_field :l, placeholder: '', value: '' %>
+                  <%= select_tag 'shop[l]', options_for_select(["有", "無"]) %>
                 </li>
                 <li>
                   <%= f.label :ジャンル： %>

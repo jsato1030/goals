@@ -1,0 +1,49 @@
+    <div id="page-wrapper">
+
+
+      <!-- Banner -->
+        <section id="banner">
+
+          <div class="inner">
+
+            <p>どの女性を編集しますか？</p>
+            <footer>
+              <ul class="buttons vertical">
+               <%= form_tag("/womans/edit", method: :post) do %>
+                 <% @women.each do |woman|%>
+                   <li><a href="/womans/<%= woman.id %>/edit"><%= woman.name %></a></li>
+                 <% end %>
+               <% end %>
+<!--                <li><a href="#main" class="button fit scrolly">検索する</a></li>
+ -->              </ul>
+            </footer>
+
+          </div>
+
+        </section>
+
+
+
+
+
+      <!-- Footer -->
+        <footer id="footer">
+
+          <ul class="copyright">
+            <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+
+        </footer>
+
+    </div>
+
+
+    <!-- Scripts -->
+      <script src="assets/jquery.min.js"></script>
+      <script src="assets/jquery.dropotron.min.js"></script>
+      <script src="assets/jquery.scrolly.min.js"></script>
+      <script src="assets/jquery.scrollgress.min.js"></script>
+      <script src="assets/skel.min.js"></script>
+      <script src="assets/util.js"></script>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="assets/main.js"></script>
