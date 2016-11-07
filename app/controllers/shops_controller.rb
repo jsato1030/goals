@@ -24,6 +24,10 @@ before_action :authenticate_user!, only: :new
     @shop = Shop.find(params[:id])
   end
 
+  def shops_edit_search
+    @shops = Shop.where(user_id: current_user.id)
+    binding.pry
+  end
   private
   def create_params
     params.require(:shop).permit(:name, :l, :genre, :tel, :transportation, :address, :bussiness_hours, :regslar_holiday, :card, :service_charge)

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       post  'reviews_search', to: 'shops#reviews_search'
       get 'shops_search'
       post  'shops_search', to: 'shops#shops_search'
+      get  'shops_edit_search', to: 'shops#shops_edit_search'
     end
   end
   resources :reviews, only: :index
