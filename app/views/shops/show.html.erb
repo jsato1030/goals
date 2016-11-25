@@ -10,10 +10,14 @@
             <footer>
               <ul class="buttons vertical">
                 <li>
-                  評価：⭐️⭐️⭐️⭐️
+                  <% if @shop.reviews.present? %>
+                    評価：<%= @shop.reviews.average(:rate).round %>/10
+                  <% else %>
+                    評価：なし
+                  <% end %>
                 </li>
                 <li>
-                  口コミ：５８件️
+                  口コミ：<%= @shop.reviews.count %>件️
                 </li>
                 <li>
                   L字テーブル：<%= @shop.l %>️
@@ -27,11 +31,11 @@
                 <li>カード：<%= @shop.card %></li>
                 <li>サービス料・チャージ料：<%= @shop.service_charge %></li>
               </ul>
-              <p>口コミ一覧(<%= @shop.reviews.count %>件)</p>
+              <p><font color="yellow">口コミ一覧(<%= @shop.reviews.count %>件)</font></p>
               <ul>
                 <% @shop.reviews.each do |review|%>
                 <li>
-                  <%= review.user.email %>：
+                  <%= review.user.nickname %>：<br>
                   <%= review.review %>
                 </li>
                 <% end %>

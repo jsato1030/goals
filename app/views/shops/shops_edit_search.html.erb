@@ -9,17 +9,14 @@
             <p>どのお店を編集しますか？</p>
             <footer>
               <ul class="buttons vertical">
-               <%= form_tag("/shops/edit", method: :post) do %>
-                <% if @shops %>
+                <% if @shops.blank? %>
+                  <li>ご自分で登録したお店はありません。</li>
+                <% else %>
                    <% @shops.each do |shop| %>
                      <li><a href="/shops/<%= shop.id %>/edit"><%= shop.name %></a></li>
                    <% end %>
-                <% else %>
-                  <li>ご自分で登録したお店はありません。</li>
                 <% end %>       
-               <% end %>
-<!--                <li><a href="#main" class="button fit scrolly">検索する</a></li>
- -->              </ul>
+              </ul>
             </footer>
 
           </div>

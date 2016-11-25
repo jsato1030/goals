@@ -1,10 +1,13 @@
 class ShopsController < ApplicationController
-before_action :authenticate_user!, only: :new
+before_action :authenticate_user!, only: [:new, :shops_edit_search]
   def index
   end
 
   def shops_search
-    @shops = Shop.where('address LIKE(?)', "%#{params[:address]}%").limit(20)
+    # @shops = Shop.where('address LIKE(?)', "%#{params[:name_or_address_cont]}%").limit(20)
+    @shops = Shop.ransack(name_or_address_cont: params[:name_or_address_cont]).result
+    
+
   end
 
   def reviews_search
@@ -25,7 +28,7 @@ before_action :authenticate_user!, only: :new
   end
 
   def shops_edit_search
-    @shops = Shop.where(user_id: current_user.id)
+    @shops = Shop.all
   end
   private
   def create_params

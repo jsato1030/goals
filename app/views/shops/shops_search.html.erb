@@ -21,16 +21,19 @@
                         <li>
                           <% if shop.reviews.present? %>
 <!--                             <span class="rating-star">
- -->                              <i class="star-actived rate-<%= shop.reviews.average(:rate).round %>0"></i>
-                            <!-- </span> -->
+                              <i class="star-actived rate-<%= shop.reviews.average(:rate).round %>0"></i>
+                            </span>
+
+ -->                        評価：<%= shop.reviews.average(:rate).round %>/10
                           <% else %>
-                            <span class="rating-star">
+<!--                             <span class="rating-star">
                             <i class="star-actived rate-0"></i>
                             </span>
+ -->                        評価：なし
                           <% end %> 
                        </li>
                         <li>
-                          口コミ：<a href="/shops/<%= shop.id %>"><%= shop.reviews.count %>件</a>️
+                          <a href="/shops/<%= shop.id %>">口コミ：<%= shop.reviews.count %>件</a>️
                         </li>
                         <li>
                           L字テーブル：<%= shop.l %>
@@ -74,3 +77,13 @@
       <script src="assets/util.js"></script>
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="assets/main.js"></script>
+<!--       <script>
+        $('#star').raty({
+          size     : 36,
+          starOff: '/assets/star-off.png',
+          starOn : '/assets/star-on.png',
+          // score: '#{ shop.reviews.average(:rate).round }0'
+           readOnly: 'true'
+          scoreName: 'test'
+        });
+      </script> -->

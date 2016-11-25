@@ -18,7 +18,11 @@
                       <p>
                         <ul>
                         <li>
-                          総合評価：⭐️⭐️⭐️⭐️
+                          <% if @shop.reviews.present? %>
+                            評価：<%= @shop.reviews.average(:rate).round %>/10
+                          <% else %>
+                           評価：なし
+                         <% end %>
                         </li>
                         </ul>
                       </p>

@@ -1,5 +1,5 @@
 class WomansController < ApplicationController
-before_action :authenticate_user!, only: :index
+before_action :authenticate_user!, only: [:index, :search]
   def index
     @woman = Woman.new
   end

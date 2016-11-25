@@ -19,10 +19,14 @@
                     <p>
                       <ul>
                       <li>
-                        評価：⭐️⭐️⭐️⭐️
+                        <% if shop.reviews.present? %>
+                          評価：<%= shop.reviews.average(:rate).round %>/10
+                        <% else %>
+                          評価：なし
+                        <% end %>
                       </li>
                       <li>
-                        口コミ：５８件️
+                          <a href="/shops/<%= shop.id %>">口コミ：<%= shop.reviews.count %>件</a>️
                       </li>
                       <li>
                         <ul class="buttons vertical">
