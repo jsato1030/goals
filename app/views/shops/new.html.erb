@@ -15,8 +15,16 @@
                   <%= f.text_field :name, placeholder: '', value: '' %>
                 </li>
                 <li>
+                  <%= f.label :お店の画像： %>
+                  <%= f.file_field :image %>
+                </li>
+                <li>
                   <%= f.label :L字テーブル： %>
                   <%= select_tag 'shop[l]', options_for_select(["有", "無"]) %>
+                </li>
+                <li>
+                  <%= f.label :カウンター： %>
+                  <%= select_tag 'shop[counter]', options_for_select(["有", "無"]) %>
                 </li>
                 <li>
                   <%= f.label :ジャンル： %>

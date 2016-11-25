@@ -32,7 +32,7 @@ before_action :authenticate_user!, only: [:new, :shops_edit_search]
   end
   private
   def create_params
-    params.require(:shop).permit(:name, :l, :genre, :tel, :transportation, :address, :bussiness_hours, :regslar_holiday, :card, :service_charge)
+    params.require(:shop).permit(:name, :image, :l, :counter, :genre, :tel, :transportation, :address, :bussiness_hours, :regslar_holiday, :card, :service_charge).merge(user_id: current_user.id)
   end
 
 end

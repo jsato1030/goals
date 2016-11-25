@@ -12,8 +12,9 @@
                 <% @shops.each do |shop| %>
                   <div class="4u 12u(narrower)">
                     <section>
-                      <span class="icon featured fa-check"></span>
-                      <header>
+                      <%= image_tag(shop.image(:thumb)) %>
+<!--                       <span class="icon featured fa-check"><%= shop.image_file_name %></span>
+ -->                      <header>
                         <h3><a href="/shops/<%= shop.id %>"><%= shop.name %></a></h3>
                       </header>
                       <p>
