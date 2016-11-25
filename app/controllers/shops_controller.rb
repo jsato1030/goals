@@ -15,7 +15,7 @@ before_action :authenticate_user!, only: [:new, :shops_edit_search]
   end
 
   def create
-    @shop = Shop.create(create_params)
+    Shop.create(create_params)
     redirect_to controller: :shops, action: :index
   end
 
@@ -30,6 +30,19 @@ before_action :authenticate_user!, only: [:new, :shops_edit_search]
   def shops_edit_search
     @shops = Shop.all
   end
+
+  def edit
+    @shop = Shop.find(params[:id])
+  end
+  
+  def update
+    shop = Shop.find(params[:id])
+    shop.update(create_params)
+
+    # Shop.update(create_params)
+    redirect_to controller: :shops, action: :index
+  end
+  
   private
   def create_params
     params.require(:shop).permit(:name, :image, :l, :counter, :genre, :tel, :transportation, :address, :bussiness_hours, :regslar_holiday, :card, :service_charge).merge(user_id: current_user.id)
