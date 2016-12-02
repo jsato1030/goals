@@ -48,3 +48,6 @@ end
 gem 'pry-rails'
 gem 'paperclip'
 gem 'ransack'
+gem "gmaps4rails"
+gem "geocoder"
+
